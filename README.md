@@ -3,7 +3,7 @@ Meowcoincore P2P
 
 `meowcoincore-p2p` adds [Meowcoin protocol](https://en.bitcoin.it/wiki/Protocol_documentation) support for Meowcoincore.
 
-See [the main meowcoincore repo](https://github.com/rvnminers-a-and-n/meowcoincore) for more information.
+See [the main meowcoincore repo](https://github.com/rvnminers-A-and-N/meowcoincore) for more information.
 
 ## Getting Started
 
@@ -42,12 +42,12 @@ peer.on('tx', function(message) {
 
 ## Contributing
 
-See [CONTRIBUTING.md](https://github.com/rvnminers-a-and-n/meowcoincore/blob/master/CONTRIBUTING.md) on the main meowcoincore repo for information about how to contribute.
+See [CONTRIBUTING.md](https://github.com/rvnminers-A-and-N/meowcoincore/blob/master/CONTRIBUTING.md) on the main meowcoincore repo for information about how to contribute.
 
 ## License
 
-Code released under [the MIT license](https://github.com/rvnminers-a-and-n/meowcoincore/blob/master/LICENSE).
+Code released under [the MIT license](https://github.com/rvnminers-A-and-N/meowcoincore/blob/master/LICENSE).
 
-Copyright 2018-2019 Rvnminers-A-and-N
+Copyright 2018-2019 rvnminers-A-and-N
 
 Copyright 2013-2015 BitPay, Inc. 

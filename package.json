@@ -15,12 +15,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/rvnminers-a-and-n/meowcoincore-p2p.git"
+    "url": "https://github.com/rvnminers-A-and-N/meowcoincore-p2p.git"
   },
   "dependencies": {
     "bloom-filter": "^0.2.0",
-    "node-buffers": "github:rvnminers-a-and-n/node-buffers",
-    "meowcoincore-lib": "github:rvnminers-a-and-n/meowcoincore-lib",
+    "node-buffers": "github:rvnminers-A-and-N/node-buffers",
+    "meowcoincore-lib": "github:rvnminers-A-and-N/meowcoincore-lib",
     "socks5-client": "^1.2.8"
   },
   "devDependencies": {
