@@ -1,7 +1,7 @@
 {
-  "name": "ravencore-p2p",
+  "name": "meowcoincore-p2p",
   "version": "1.0.0",
-  "description": "Interface to the ravencoin P2P network for ravencore",
+  "description": "Interface to the meowcoin P2P network for meowcoincore",
   "author": "Under",
   "main": "index.js",
   "scripts": {
@@ -10,17 +10,17 @@
     "coverage": "nyc mocha"
   },
   "keywords": [
-    "ravencoin",
-    "ravencore"
+    "meowcoin",
+    "meowcoincore"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/underdarkskies/ravencore-p2p.git"
+    "url": "https://github.com/rvnminers-a-and-n/meowcoincore-p2p.git"
   },
   "dependencies": {
     "bloom-filter": "^0.2.0",
-    "node-buffers": "github:underdarkskies/node-buffers",
-    "ravencore-lib": "github:underdarkskies/ravencore-lib",
+    "node-buffers": "github:rvnminers-a-and-n/node-buffers",
+    "meowcoincore-lib": "github:rvnminers-a-and-n/meowcoincore-lib",
     "socks5-client": "^1.2.8"
   },
   "devDependencies": {

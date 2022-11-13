@@ -4,12 +4,12 @@
 
 var should = require('chai').should();
 
-var ravencore = require('ravencore-lib');
+var meowcoincore = require('meowcoincore-lib');
 var P2P = require('../');
 var Inventory = P2P.Inventory;
-var BufferUtils = ravencore.util.buffer;
-var BufferWriter = ravencore.encoding.BufferWriter;
-var BufferReader = ravencore.encoding.BufferReader;
+var BufferUtils = meowcoincore.util.buffer;
+var BufferWriter = meowcoincore.encoding.BufferWriter;
+var BufferReader = meowcoincore.encoding.BufferReader;
 
 describe('Inventory', function() {
 

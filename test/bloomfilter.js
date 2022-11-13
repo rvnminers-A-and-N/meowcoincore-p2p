@@ -4,7 +4,7 @@ var chai = require('chai');
 var should = chai.should();
 
 var assert = require('assert');
-var ravencore = require('ravencore-lib');
+var meowcoincore = require('meowcoincore-lib');
 var Data = require('./data/messages');
 var P2P = require('../');
 var BloomFilter = P2P.BloomFilter;
@@ -32,16 +32,16 @@ describe('BloomFilter', function() {
     filter.toBuffer().should.deep.equal(testPayloadBuffer);
   });
 
-  // test data from: https://github.com/ravenproject/ravencoin/blob/master/src/test/bloom_tests.cpp
+  // test data from: https://github.com/meowcoinproject/meowcoin/blob/master/src/test/bloom_tests.cpp
 
   it('serialize filter with public keys added', function() {
 
-    var privateKey = ravencore.PrivateKey.fromWIF('5Kg1gnAjaLfKiwhhPpGS3QfRg2m6awQvaj98JCZBZQ5SuS2F15C');
+    var privateKey = meowcoincore.PrivateKey.fromWIF('5Kg1gnAjaLfKiwhhPpGS3QfRg2m6awQvaj98JCZBZQ5SuS2F15C');
     var publicKey = privateKey.toPublicKey();
 
     var filter = BloomFilter.create(2, 0.001, 0, BloomFilter.BLOOM_UPDATE_ALL);
     filter.insert(publicKey.toBuffer());
-    filter.insert(ravencore.crypto.Hash.sha256ripemd160(publicKey.toBuffer()));
+    filter.insert(meowcoincore.crypto.Hash.sha256ripemd160(publicKey.toBuffer()));
 
     var expectedFilter = BloomFilter.fromBuffer(ParseHex('038fc16b080000000000000001'));
 

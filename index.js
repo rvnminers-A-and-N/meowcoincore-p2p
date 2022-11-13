@@ -1,5 +1,5 @@
 /*eslint strict:0*/
-var ravencore = require('ravencore-lib');
-ravencore.P2P = require('./lib');
+var meowcoincore = require('meowcoincore-lib');
+meowcoincore.P2P = require('./lib');
 
-module.exports = ravencore.P2P;
+module.exports = meowcoincore.P2P;

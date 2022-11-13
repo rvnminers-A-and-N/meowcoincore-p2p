@@ -10,14 +10,14 @@ var expect = chai.expect;
 var sinon = require('sinon');
 var fs = require('fs');
 
-var ravencore = require('ravencore-lib');
-var _ = ravencore.deps._;
+var meowcoincore = require('meowcoincore-lib');
+var _ = meowcoincore.deps._;
 var P2P = require('../');
 var Peer = P2P.Peer;
 var EventEmitter = require('events').EventEmitter;
 var Messages = P2P.Messages;
 var messages = new Messages();
-var Networks = ravencore.Networks;
+var Networks = meowcoincore.Networks;
 
 describe('Peer', function() {
 

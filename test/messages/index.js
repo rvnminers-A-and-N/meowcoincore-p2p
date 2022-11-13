@@ -7,7 +7,7 @@ var Buffers = require('node-buffers');
 var P2P = require('../../');
 var Messages = P2P.Messages;
 var messages = new Messages();
-var ravencore = require('ravencore-lib');
+var meowcoincore = require('meowcoincore-lib');
 var Data = require('../data/messages'); //todo merge with commandData
 var commandData = require('../data/messages.json');
 
@@ -25,31 +25,31 @@ describe('Messages', function() {
 
   describe('@constructor', function() {
     it('sets properties correctly', function() {
-      var network = ravencore.Networks.defaultNetwork;
+      var network = meowcoincore.Networks.defaultNetwork;
       var messages = new Messages({
         network: network,
-        Block: ravencore.Block,
-        Transaction: ravencore.Transaction
+        Block: meowcoincore.Block,
+        Transaction: meowcoincore.Transaction
       });
       should.exist(messages.builder.commands);
       should.exist(messages.builder.constructors);
-      messages.builder.constructors.Block.should.equal(ravencore.Block);
-      messages.builder.constructors.Transaction.should.equal(ravencore.Transaction);
+      messages.builder.constructors.Block.should.equal(meowcoincore.Block);
+      messages.builder.constructors.Transaction.should.equal(meowcoincore.Transaction);
       messages.network.should.deep.equal(network);
     });
     it('network should be unique for each set of messages', function() {
       var messages = new Messages({
-        network: ravencore.Networks.livenet
+        network: meowcoincore.Networks.livenet
       });
       var messages2 = new Messages({
-        network: ravencore.Networks.testnet
+        network: meowcoincore.Networks.testnet
       });
-      messages.network.should.deep.equal(ravencore.Networks.livenet);
-      messages2.network.should.deep.equal(ravencore.Networks.testnet);
+      messages.network.should.deep.equal(meowcoincore.Networks.livenet);
+      messages2.network.should.deep.equal(meowcoincore.Networks.testnet);
       var message1 = messages.Version();
-      message1.network.should.deep.equal(ravencore.Networks.livenet);
+      message1.network.should.deep.equal(meowcoincore.Networks.livenet);
       var message2 = messages2.Version();
-      message2.network.should.deep.equal(ravencore.Networks.testnet);
+      message2.network.should.deep.equal(meowcoincore.Networks.testnet);
     });
   });
 
@@ -91,7 +91,7 @@ describe('Messages', function() {
       var name = messages.builder.commandsMap[command];
       it(name, function() {
         var message = messages[name]();
-        message.network.should.deep.equal(ravencore.Networks.defaultNetwork);
+        message.network.should.deep.equal(meowcoincore.Networks.defaultNetwork);
       });
     });
 
@@ -207,11 +207,11 @@ describe('Messages', function() {
 
   describe('#add', function() {
     it('should add a custom message', function() {
-      var network = ravencore.Networks.defaultNetwork;
+      var network = meowcoincore.Networks.defaultNetwork;
       var messages = new Messages({
         network: network,
-        Block: ravencore.Block,
-        Transaction: ravencore.Transaction
+        Block: meowcoincore.Block,
+        Transaction: meowcoincore.Transaction
       });
       /* eslint-disable no-unused-vars */
       var CustomMessage = function(arg, options) {
